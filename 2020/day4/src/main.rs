@@ -22,7 +22,7 @@ fn main() {
             if leftleft == "byr" {
                 if right_i >= 1920 && right_i <= 2002 {
                     lefters.insert(leftleft);
-                } 
+                }
             }
             // iyr (Issue Year) - four digits; at least 2010 and at most 2020.
             if leftleft == "iyr" {

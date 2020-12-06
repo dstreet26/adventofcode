@@ -18,51 +18,49 @@ fn main() {
     println!("hightest id: {}", highest);
 }
 
-fn get_front_or_back(input : &str) -> u32 {
+fn get_front_or_back(input: &str) -> u32 {
     let mut min = 0;
     let mut max = 127;
     let mut out = 0;
     for i in input.chars() {
         if i == 'B' {
-            min = subdivide_back(min,max);
+            min = subdivide_back(min, max);
             out = min;
         } else if i == 'F' {
-            max = subdivide_front(min,max);
+            max = subdivide_front(min, max);
             out = max;
         }
     }
     out
 }
-fn get_left_or_right(input : &str) -> u32 {
+fn get_left_or_right(input: &str) -> u32 {
     let mut min = 0;
     let mut max = 7;
     let mut out = 0;
     for i in input.chars() {
         if i == 'R' {
-            min = subdivide_back(min,max);
+            min = subdivide_back(min, max);
             out = min;
         } else if i == 'L' {
-            max = subdivide_front(min,max);
+            max = subdivide_front(min, max);
             out = max;
         }
     }
     out
 }
 fn subdivide_back(min: u32, max: u32) -> u32 {
-    let diff = ((max - min) + 1)  / 2;
+    let diff = ((max - min) + 1) / 2;
     if diff == 1 {
         max
     } else {
         min + diff
-        
     }
 }
 fn subdivide_front(min: u32, max: u32) -> u32 {
-    let diff = ((max - min) + 1)  / 2;
+    let diff = ((max - min) + 1) / 2;
     if diff == 1 {
         min
     } else {
         max - diff
-
     }
 }
