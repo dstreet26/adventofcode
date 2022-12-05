@@ -1,3 +1,5 @@
+// APL       ×/{(⊂⊃⍸2020=⍵∘.+⍵)⌷⍵}nums2
+// APL bonus (3 cominations)  ×/{(⊂⊃⍸2020=⍵∘.+⍵∘.+⍵)⌷⍵}
 use itertools::Itertools;
 use std::fs;
 fn main() {
